@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Book Taxi | PandaCabs Tours & Travels, Sambhajinagar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-car-side"></i>
+                <span>PandaCabs</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tourist-places.html">Tourist Places</a></li>
+                <li><a href="taxi-services.html">Taxi Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header page-header-contact">
+        <div class="page-header-bg"></div>
+        <div class="container">
+            <span class="section-tag">Get in Touch</span>
+            <h1>Contact & Booking</h1>
+            <p>Book your taxi or plan your tour. We're just a call away.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's Connect</h2>
+                    <p>Have a question or want to book a ride? Reach out to us through any of the following channels.</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Our Office</h4>
+                            <p>Near Railway Station, Sambhajinagar (Aurangabad), Maharashtra - 431001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+919923322790">+91 99233 22790</a></p>
+                            <p><a href="tel:+919923322790">+91 99233 22790</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/919923322790" target="_blank">+91 99233 22790</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@pandacabs.com">info@pandacabs.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>24/7 Available for Bookings</p>
+                            <p>Office: Mon - Sat, 9:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919923322790" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <form class="contact-form booking-form" aria-label="Booking form">
+                    <h3><i class="fas fa-calendar-check"></i> Book Your Ride</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" placeholder="+91 99233 22790" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Type *</label>
+                            <select id="service" required>
+                                <option value="">Select service</option>
+                                <option>One Way Taxi - Mumbai</option>
+                                <option>Round Trip - Mumbai</option>
+                                <option>One Way Taxi - Pune</option>
+                                <option>Round Trip - Pune</option>
+                                <option>Airport Pickup</option>
+                                <option>Airport Drop</option>
+                                <option>Local Sightseeing</option>
+                                <option>Ajanta Caves Tour</option>
+                                <option>Ellora Caves Tour</option>
+                                <option>Complete Heritage Tour</option>
+                                <option>Other / Custom</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Travel Date *</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Pickup Time</label>
+                            <input type="time" id="time">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="passengers">Passengers</label>
+                            <select id="passengers">
+                                <option>1-2 Passengers</option>
+                                <option>3-4 Passengers</option>
+                                <option>5-6 Passengers</option>
+                                <option>7+ Passengers</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-type">Car Preference</label>
+                            <select id="car-type">
+                                <option>Sedan (Dzire/Etios)</option>
+                                <option>SUV (Ertiga/Innova)</option>
+                                <option>Innova Crysta</option>
+                                <option>Tempo Traveller</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickup-location">Pickup Location</label>
+                        <input type="text" id="pickup-location" placeholder="Hotel name, address, or landmark">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Notes</label>
+                        <textarea id="message" rows="3" placeholder="Any special requirements, luggage details, etc."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Submit Booking Request</button>
+                    <p class="form-note"><i class="fas fa-info-circle"></i> We'll confirm your booking within 30 minutes via call/WhatsApp.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120258.01665498498!2d75.2520073!3d19.8762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2cedb!2sChhatrapati%20Sambhajinagar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 12px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="PandaCabs location on Google Maps">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-car-side"></i>
+                        <span>PandaCabs</span>
+                    </a>
+                    <p>Your trusted travel partner in Sambhajinagar. Taxi services, tourist place visits & airport transfers since 2016.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tourist-places.html">Tourist Places</a></li>
+                        <li><a href="taxi-services.html">Taxi Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Tourist Places</h4>
+                    <ul>
+                        <li><a href="tourist-places.html#ajanta">Ajanta Caves</a></li>
+                        <li><a href="tourist-places.html#ellora">Ellora Caves</a></li>
+                        <li><a href="tourist-places.html#daulatabad">Daulatabad Fort</a></li>
+                        <li><a href="tourist-places.html#bibi-ka-maqbara">Bibi Ka Maqbara</a></li>
+                        <li><a href="tourist-places.html#panchakki">Panchakki</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Taxi Routes</h4>
+                    <ul>
+                        <li><a href="taxi-services.html#mumbai">Sambhajinagar to Mumbai</a></li>
+                        <li><a href="taxi-services.html#pune">Sambhajinagar to Pune</a></li>
+                        <li><a href="taxi-services.html#airport">Airport Pickup/Drop</a></li>
+                        <li><a href="taxi-services.html#other-routes">Other Routes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PandaCabs Tours & Travels, Sambhajinagar. All rights reserved.</p>
+                <div class="footer-contact">
+                    <span><i class="fas fa-phone-alt"></i> +91 99233 22790</span>
+                    <span><i class="fas fa-envelope"></i> info@pandacabs.com</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919923322790" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
