@@ -612,6 +612,9 @@
         </div>
     </section>
 
+    <!-- Pagination -->
+    <nav class="pagination" id="placesPagination" aria-label="Tourist places pagination"></nav>
+
     <!-- Tour Packages CTA -->
     <section class="cta-section">
         <div class="container">
@@ -695,5 +698,49 @@
     </button>
 
     <script src="js/script.js"></script>
+    <script>
+      (function () {
+        const PER_PAGE = 6;
+        const cards = Array.from(document.querySelectorAll('.tourist-places .place-card'));
+        const pagination = document.getElementById('placesPagination');
+        if (!cards.length || !pagination) return;
+        const totalPages = Math.ceil(cards.length / PER_PAGE);
+        let current = 1;
+
+        const initialHash = window.location.hash.replace('#', '');
+        if (initialHash) {
+          const idx = cards.findIndex(c => c.id === initialHash);
+          if (idx >= 0) current = Math.floor(idx / PER_PAGE) + 1;
+        }
+
+        function render() {
+          cards.forEach((c, i) => {
+            const page = Math.floor(i / PER_PAGE) + 1;
+            c.style.display = page === current ? '' : 'none';
+          });
+          let html = '';
+          html += `<button class="page-btn" data-page="prev" ${current === 1 ? 'disabled' : ''} aria-label="Previous page"><i class="fas fa-chevron-left"></i></button>`;
+          for (let p = 1; p <= totalPages; p++) {
+            html += `<button class="page-btn ${p === current ? 'active' : ''}" data-page="${p}" aria-label="Page ${p}" ${p === current ? 'aria-current="page"' : ''}>${p}</button>`;
+          }
+          html += `<button class="page-btn" data-page="next" ${current === totalPages ? 'disabled' : ''} aria-label="Next page"><i class="fas fa-chevron-right"></i></button>`;
+          pagination.innerHTML = html;
+        }
+
+        pagination.addEventListener('click', (e) => {
+          const btn = e.target.closest('button[data-page]');
+          if (!btn || btn.disabled) return;
+          const val = btn.getAttribute('data-page');
+          if (val === 'prev') current = Math.max(1, current - 1);
+          else if (val === 'next') current = Math.min(totalPages, current + 1);
+          else current = parseInt(val, 10);
+          render();
+          const section = document.querySelector('.tourist-places');
+          if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        render();
+      })();
+    </script>
 </body>
 </html>

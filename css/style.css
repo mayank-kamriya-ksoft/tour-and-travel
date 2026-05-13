@@ -1948,3 +1948,40 @@ ul { list-style: none; }
         height: 42px;
     }
 }
+/* ===== Pagination ===== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 20px 16px 60px;
+}
+.pagination .page-btn {
+    min-width: 42px;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    color: #1e293b;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagination .page-btn:hover:not(:disabled) {
+    border-color: #f59e0b;
+    color: #f59e0b;
+}
+.pagination .page-btn.active {
+    background: #f59e0b;
+    border-color: #f59e0b;
+    color: #fff;
+}
+.pagination .page-btn:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
