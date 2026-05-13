@@ -118,24 +118,38 @@ document.querySelectorAll(
 // ===== Form Submissions =====
 const bookingForm = document.querySelector('.booking-form');
 if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
+    bookingForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const btn = bookingForm.querySelector('.btn');
+        const btn = bookingForm.querySelector('button[type="submit"]') || bookingForm.querySelector('.btn');
         const originalHTML = btn.innerHTML;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         btn.disabled = true;
 
-        setTimeout(() => {
+        const data = Object.fromEntries(new FormData(bookingForm).entries());
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+            const json = await res.json().catch(() => ({}));
+            if (!res.ok || !json.ok) throw new Error(json.error || 'Send failed');
+
             btn.innerHTML = '<i class="fas fa-check-circle"></i> Booking Request Sent!';
             btn.style.background = '#059669';
             bookingForm.reset();
-
+        } catch (err) {
+            console.error(err);
+            btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed — try calling us';
+            btn.style.background = '#dc2626';
+        } finally {
             setTimeout(() => {
                 btn.innerHTML = originalHTML;
                 btn.style.background = '';
                 btn.disabled = false;
-            }, 4000);
-        }, 1500);
+            }, 4500);
+        }
     });
 }
 

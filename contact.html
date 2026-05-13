@@ -165,21 +165,21 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
-                            <input type="text" id="name" placeholder="Your full name" required>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" placeholder="+91 99233 22790" required>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 99233 22790" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="your@email.com">
+                            <input type="email" id="email" name="email" placeholder="your@email.com">
                         </div>
                         <div class="form-group">
                             <label for="service">Service Type *</label>
-                            <select id="service" required>
+                            <select id="service" name="service" required>
                                 <option value="">Select service</option>
                                 <option>One Way Taxi - Mumbai</option>
                                 <option>Round Trip - Mumbai</option>
@@ -198,17 +198,17 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="date">Travel Date *</label>
-                            <input type="date" id="date" required>
+                            <input type="date" id="date" name="date" required>
                         </div>
                         <div class="form-group">
                             <label for="time">Pickup Time</label>
-                            <input type="time" id="time">
+                            <input type="time" id="time" name="time">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="passengers">Passengers</label>
-                            <select id="passengers">
+                            <select id="passengers" name="passengers">
                                 <option>1-2 Passengers</option>
                                 <option>3-4 Passengers</option>
                                 <option>5-6 Passengers</option>
@@ -217,7 +217,7 @@
                         </div>
                         <div class="form-group">
                             <label for="car-type">Car Preference</label>
-                            <select id="car-type">
+                            <select id="car-type" name="carType">
                                 <option>Sedan (Dzire/Etios)</option>
                                 <option>SUV (Ertiga/Innova)</option>
                                 <option>Innova Crysta</option>
@@ -227,11 +227,11 @@
                     </div>
                     <div class="form-group">
                         <label for="pickup-location">Pickup Location</label>
-                        <input type="text" id="pickup-location" placeholder="Hotel name, address, or landmark">
+                        <input type="text" id="pickup-location" name="pickupLocation" placeholder="Hotel name, address, or landmark">
                     </div>
                     <div class="form-group">
                         <label for="message">Additional Notes</label>
-                        <textarea id="message" rows="3" placeholder="Any special requirements, luggage details, etc."></textarea>
+                        <textarea id="message" name="message" rows="3" placeholder="Any special requirements, luggage details, etc."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Submit Booking Request</button>
                     <p class="form-note"><i class="fas fa-info-circle"></i> We'll confirm your booking within 30 minutes via call/WhatsApp.</p>
