@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
 const escape = (s = '') =>
   String(s)
@@ -8,7 +8,7 @@ const escape = (s = '') =>
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 
-module.exports = async (req, res) => {
+const handler = async (req, res) => {
   // CORS (same-origin will not need it, but harmless)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -105,3 +105,5 @@ Notes: ${message}`;
     return res.status(500).json({ ok: false, error: 'Failed to send email.' });
   }
 };
+
+export default handler;
