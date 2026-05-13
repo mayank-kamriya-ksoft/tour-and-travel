@@ -1,4 +1,7 @@
 {
   "cleanUrls": false,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "outputDirectory": ".",
+  "buildCommand": null,
+  "installCommand": "npm install"
 }
