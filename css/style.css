@@ -1985,3 +1985,207 @@ ul { list-style: none; }
     opacity: .45;
     cursor: not-allowed;
 }
+
+.car-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-top:30px;
+}
+
+.taxi-car-card{
+    background:#fff;
+    border-radius:22px;
+    padding:22px;
+    border:1px solid #e8edf5;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.3s ease;
+}
+
+.taxi-car-card:hover{
+    transform:translateY(-6px);
+}
+
+.car-top{
+    margin-bottom:18px;
+}
+
+.car-top h3{
+    font-size:28px;
+    color:#0f172a;
+    margin-top:12px;
+    margin-bottom:0;
+}
+
+.car-badge{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    background:#eef2ff;
+    color:#2643d4;
+}
+
+.suv-badge{
+    background:#e8fff1;
+    color:#16a34a;
+}
+
+.premium-badge{
+    background:#f3e8ff;
+    color:#9333ea;
+}
+
+.traveller-badge{
+    background:#fff1e8;
+    color:#ea580c;
+}
+
+/* IMAGE SECTION */
+
+/* CAR SLIDER */
+
+.car-slider{
+    position:relative;
+    width:100%;
+    height:260px;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:20px;
+    background:#f1f5f9;
+}
+
+.slider-track{
+    display:flex;
+    width:100%;
+    height:100%;
+    transition:transform 0.5s ease;
+}
+
+.slider-track img{
+    width:100%;
+    min-width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* BUTTONS */
+
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,0.55);
+    color:#fff;
+    cursor:pointer;
+    z-index:10;
+    transition:0.3s ease;
+}
+
+.slider-btn:hover{
+    background:#2643d4;
+}
+
+.slider-btn.prev{
+    left:12px;
+}
+
+.slider-btn.next{
+    right:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .car-slider{
+        height:220px;
+    }
+}
+
+.car-image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* FEATURES */
+
+.car-feature-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.car-feature-list span{
+    background:#f8fafc;
+    padding:10px 14px;
+    border-radius:12px;
+    font-size:14px;
+}
+
+/* PRICING */
+
+.car-price-wrapper{
+    display:flex;
+    gap:16px;
+    margin-bottom:22px;
+}
+
+.car-price-box{
+    flex:1;
+    background:#f8fafc;
+    padding:16px;
+    border-radius:14px;
+}
+
+.car-price-box small{
+    display:block;
+    margin-bottom:6px;
+    color:#64748b;
+    font-size:14px;
+}
+
+.car-price-box strong{
+    font-size:28px;
+    color:#2643d4;
+}
+
+.car-book-btn{
+    width:100%;
+    justify-content:center;
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+    .car-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .car-image-grid{
+        grid-template-columns:1fr;
+    }
+
+    .car-image-box{
+        height:220px;
+    }
+
+    .car-top h3{
+        font-size:22px;
+    }
+
+    .car-price-box strong{
+        font-size:24px;
+    }
+}
