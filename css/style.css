@@ -886,8 +886,9 @@ ul { list-style: none; }
 
 /* ===== Taxi Services Page ===== */
 .taxi-section {
-    padding: 80px 0;
+    padding: 80px 0 24px;
 }
+
 
 .taxi-detail-card {
     background: var(--white);
@@ -995,9 +996,10 @@ ul { list-style: none; }
 
 /* ===== Airport Section ===== */
 .airport-section {
-    padding: 80px 0;
+    padding: 48px 0 80px;
     background: var(--gray-light);
 }
+
 
 .airport-grid {
     display: grid;
